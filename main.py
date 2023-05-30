@@ -1,20 +1,23 @@
-import requests
-from src.parsed_table import ParsedTable
+import time
 
-urls = [
+from src.writer import write_to_file
+
+URLS = [
     "https://somafm.com/dronezone/songhistory.html",
     "https://somafm.com/darkzone/songhistory.html",
     "https://somafm.com/deepspaceone/songhistory.html",
     "https://somafm.com/missioncontrol/songhistory.html"
 ]
 
+
 def main():
-    for url in urls:
-        print(f"--------- {url} -----------")
-        page = requests.get(url).text
-        table = ParsedTable(page)
-        table.parse()
-        print(table.parsed)
+    while True:
+        try:
+            write_to_file(URLS)
+        except Exception as e:
+            print(e)
+        time.sleep(3600)
+
 
 
 if __name__ == "__main__":
