@@ -1,5 +1,5 @@
 import requests
-from src.parsed_row import ParsedRow
+from src.parsed_table import ParsedTable
 
 urls = [
     "https://somafm.com/dronezone/songhistory.html",
@@ -9,9 +9,12 @@ urls = [
 ]
 
 def main():
-    page = requests.get(urls[0]).text
-    row = ParsedRow(page)
-    row.parse()
+    for url in urls:
+        print(f"--------- {url} -----------")
+        page = requests.get(url).text
+        table = ParsedTable(page)
+        table.parse()
+        print(table.parsed)
 
 
 if __name__ == "__main__":
