@@ -1,3 +1,12 @@
+*.pyc
+.env
 .venv
 .idea
+.pytest_cache
+darkzone
+deepspaceone
+dronezone
+missioncontrol
+
+
 
