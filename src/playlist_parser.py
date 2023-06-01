@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 class PlaylistParser:
     """
-    Returns parsed playlist as list of lists.
+    Returns parsed playlist as list of tuples.
     Artist, Album, Song, URL
     """
 
@@ -24,7 +24,6 @@ class PlaylistParser:
         Row = namedtuple("Row", ["Artist", "Song", "Album", "URL"])
         for artist, song, album, url in zip(artists, songs, albums, urls, strict=True):
             self.parsed.append(Row(artist, song, album, url))
-        # print(f" in self.parsed {self.parsed}")
         return self.parsed
 
     @property
