@@ -1,6 +1,6 @@
 import time
 
-from src.writer import write_to_file
+from src.file_writer import write_to_file
 
 URLS = [
     "https://somafm.com/dronezone/songhistory.html",
