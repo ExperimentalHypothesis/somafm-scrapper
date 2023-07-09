@@ -21,9 +21,10 @@ class PlaylistParser:
         albums = [a.text for a in self.albums[1:]]
         songs = [s.text.strip() for s in self.songs[1:]]
         urls = [x.find("a")["href"] for x in self.urls[1:]]
-        Row = namedtuple("Row", ["Artist", "Song", "Album", "URL"])
+        Row = namedtuple("Row", ["channel", "artist", "song", "album", "url"])
         for artist, song, album, url in zip(artists, songs, albums, urls, strict=True):
-            self.parsed.append(Row(artist, song, album, url))
+            row = Row(self.channel, artist, song, album, url)
+            self.parsed.append(row)
         return self.parsed
 
     @property
@@ -49,3 +50,14 @@ class PlaylistParser:
         locator = "td:nth-child(4)"
         urls = self.soup.select(locator)
         return urls
+
+    @property
+    def channel(self):
+        locator = "div#channelblock h1"
+        channel = self.soup.select_one(locator).get_text(strip=True)
+        return channel
+
+
+if __name__ == "__main__":
+    p = PlaylistParser("https://somafm.com/dronezone/songhistory.html")
+    p.parse()
