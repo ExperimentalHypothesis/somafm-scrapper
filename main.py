@@ -1,4 +1,4 @@
-from datetime import time
+import time
 
 from src.db_writer import MySQL
 from src.playlist_parser import PlaylistParser
@@ -10,8 +10,14 @@ URLS = [
     "https://somafm.com/missioncontrol/songhistory.html"
 ]
 
+# TABLE_NAMES = [
+#     "dronezone",
+#     "deepspaceone",
+#     "thedarkzone",
+#     "missioncontrol"
+# ]
+#
 
-# TODO move this to parser
 def get_parsed_rows(urls: list) -> list:
     rows = []
     for url in URLS:
@@ -24,14 +30,25 @@ def get_parsed_rows(urls: list) -> list:
 
 
 def main():
-    mysql = MySQL()
-
     rows = get_parsed_rows(urls=URLS)
-    for row in rows:
+    channels = {row[0]: None for row in rows}
+    for channel, last_played_at in channels.items():
+        channels[channel] = mysql.fetch_last_played_at(channel)
+
+    for row in reversed(rows):  # ID increment fits with time increment
+        channel = row[0]
+        played_at = row[-1]
+        if played_at <= channels[channel]:
+            print(f"uz tam je {played_at}, {channels[channel]}, {channel}")
+            continue
         mysql.insert_row(*row)
 
 
 if __name__ == "__main__":
     while True:
-        main()
-        time.sleep(36000)
+        mysql = MySQL()
+        try:
+            main()
+        finally:
+            mysql.close()
+        time.sleep(3600)

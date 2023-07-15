@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 class PlaylistParser:
     """
     Returns parsed playlist as list of tuples.
-    Artist, Album, Song, URL
+    Artist, Album, Song, URL, PlayedAt
     """
 
     def __init__(self, url):
@@ -19,13 +19,14 @@ class PlaylistParser:
         self.parsed = []
 
     def parse(self) -> List[namedtuple]:
-        played_at = [self._convert_time(a.text) for a in self.played_at[1:] if a.text]
+        played_at = [self.convert_time(a.text) for a in self.played_at[1:] if a.text]
         artists = [a.text for a in self.artists[1:]]
         albums = [a.text for a in self.albums[1:]]
         songs = [s.text.strip() for s in self.songs[1:]]
         urls = [x.find("a")["href"] for x in self.urls[1:]]
 
-        self._delete_break_station(played_at, artists)
+        if len(played_at) != len(albums):
+            self.delete_break_station(played_at, artists)
 
         Row = namedtuple("Row", ["channel", "artist", "song", "album", "url", "played_at"])
         for artist, song, album, url, played_at in zip(artists, songs, albums, urls, played_at, strict=True):
@@ -70,11 +71,9 @@ class PlaylistParser:
         return channel
 
     @staticmethod
-    def _delete_break_station(played_at, artists):
-        print(f"_delete_break_station {played_at} {artists}")
+    def delete_break_station(played_at, artists):
         idx_to_delete = []
         for idx, artist in enumerate(artists):
-            print(artist, idx)
             if artist == "Break / Station ID":
                 idx_to_delete.append(idx)
 
@@ -84,15 +83,15 @@ class PlaylistParser:
             del played_at[idx]
 
     @staticmethod
-    def _convert_time(scrapped_time):
+    def convert_time(scrapped_time):
         scrapped_time = scrapped_time.replace("\xa0 (Now)", "").strip()
         current_date = datetime.now().date()
         current_datetime = f"{current_date} {scrapped_time}"
-        return datetime.strptime(current_datetime, "%Y-%m-%d %H:%M:%S") + timedelta(hours=-3)
+        return datetime.strptime(current_datetime, "%Y-%m-%d %H:%M:%S") + timedelta(hours=+9)
 
 
-if __name__ == "__main__":
-    p = PlaylistParser("https://somafm.com/dronezone/songhistory.html")
-    p.parse()
-    for i in p.parsed:
-        print(i)
+# if __name__ == "__main__":
+#     p = PlaylistParser("https://somafm.com/dronezone/songhistory.html")
+#     p.parse()
+#     for i in p.parsed:
+#         print(i)

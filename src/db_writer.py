@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import mysql.connector
 from mysql.connector import Error
 
@@ -21,11 +23,21 @@ class MySQL:
         except Error as er:
             print(f"Error {er} while connecting")
 
-    def insert_row(self, table_name, artist, song, album, url, played_at):
-        print(f"inserting row to db")
+    # def insert(self, rows):
+    #
+    #     last = self.fetch_last_played_at(table_name)
+    #
+    #     for row in
 
-        qry = f"INSERT INTO {table_name} (artist, song, album, url, played_at) VALUES (%s, %s, %s, %s, %s)"
-        print(qry)
+    def insert_row(self, table_name, artist, song, album, url, played_at):
+        print(f"inserting {artist}, {song}, {album} to table {table_name}")
+
+        # last_played_at = self.fetch_last_played_at(table_name)
+        # print(last_played_at)
+        # qry = f"INSERT INTO {table_name} (artist, song, album, url, played_at) " \
+        #       f"VALUES (%s, %s, %s, %s, %s) "\
+        #       f"WHERE played_at > last_played_at"
+        qry = f"-- INSERT INTO {table_name} (artist, song, album, url, played_at) VALUES (%s, %s, %s, %s, %s)"
         values = (artist, song, album, url, played_at)
 
         try:
@@ -34,7 +46,18 @@ class MySQL:
         except Error as er:
             print(f"Error {er} while inserting {values}")
 
-    def disconnect(self):
+    def fetch_last_played_at(self, table_name):
+        print(f"fetching last played from {table_name}")
+        try:
+            query = f"SELECT played_at FROM {table_name} ORDER BY played_at DESC LIMIT 1"
+            self.cursor.execute(query)
+            result = self.cursor.fetchone()
+            return result[0] if result else datetime(2000, 1, 1, 0, 00, 0)
+            # return result[0] or datetime(2000, 1, 1, 0, 00, 0)
+        except Error as er:
+            print(f"Error {er} while executing query: {query}")
+
+    def close(self):
         print(f"disconnecting from db")
         if self.connection.is_connected():
             self.cursor.close()
@@ -45,12 +68,14 @@ if __name__ == "__main__":
     try:
         mysql = MySQL()
         table = "dronezone"
-        data = ["Adam Pacione", "The Channel Swimmer", "From Stills To Motion", "https://infraction.bandcamp.com"]
-        mysql.insert_row(table, *data)
+        last = mysql.fetch_last_played_at(table)
+        print(last)
+        # data = ["Adam Pacione", "The Channel Swimmer", "From Stills To Motion", "https://infraction.bandcamp.com"]
+        # mysql.insert_row(table, *data)
     except Error as err:
         print(err)
     finally:
-        mysql.disconnect()
+        mysql.close()
 
 
 # connecting to db
