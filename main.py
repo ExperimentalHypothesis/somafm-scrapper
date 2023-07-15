@@ -19,7 +19,7 @@ def get_parsed_rows(urls: list) -> list:
         playlist = parser.parse()
         for row in playlist:
             channel = (lambda ch: ch.lower().replace(" ", ""))(row[0])  # Drone Zone -> dronezone
-            rows.append(tuple([channel, row.artist, row.song, row.album, row.url]))
+            rows.append(tuple([channel, row.artist, row.song, row.album, row.url, row.played_at]))
     return rows
 
 

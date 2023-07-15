@@ -21,12 +21,12 @@ class MySQL:
         except Error as er:
             print(f"Error {er} while connecting")
 
-    def insert_row(self, table_name, artist, song, album, url):
+    def insert_row(self, table_name, artist, song, album, url, played_at):
         print(f"inserting row to db")
 
-        qry = f"INSERT INTO {table_name} (artist, song, album, url) VALUES (%s, %s, %s, %s)"
+        qry = f"INSERT INTO {table_name} (artist, song, album, url, played_at) VALUES (%s, %s, %s, %s, %s)"
         print(qry)
-        values = (artist, song, album, url)
+        values = (artist, song, album, url, played_at)
 
         try:
             self.cursor.execute(qry, values)
