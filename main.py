@@ -10,14 +10,6 @@ URLS = [
     "https://somafm.com/missioncontrol/songhistory.html"
 ]
 
-# TABLE_NAMES = [
-#     "dronezone",
-#     "deepspaceone",
-#     "thedarkzone",
-#     "missioncontrol"
-# ]
-#
-
 def get_parsed_rows(urls: list) -> list:
     rows = []
     for url in URLS:
