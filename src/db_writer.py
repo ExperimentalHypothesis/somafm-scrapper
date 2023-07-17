@@ -23,21 +23,11 @@ class MySQL:
         except Error as er:
             print(f"Error {er} while connecting")
 
-    # def insert(self, rows):
-    #
-    #     last = self.fetch_last_played_at(table_name)
-    #
-    #     for row in
 
     def insert_row(self, table_name, artist, song, album, url, played_at):
         print(f"inserting {artist}, {song}, {album} to table {table_name}")
 
-        # last_played_at = self.fetch_last_played_at(table_name)
-        # print(last_played_at)
-        # qry = f"INSERT INTO {table_name} (artist, song, album, url, played_at) " \
-        #       f"VALUES (%s, %s, %s, %s, %s) "\
-        #       f"WHERE played_at > last_played_at"
-        qry = f"-- INSERT INTO {table_name} (artist, song, album, url, played_at) VALUES (%s, %s, %s, %s, %s)"
+        qry = f"INSERT INTO {table_name} (artist, song, album, url, played_at) VALUES (%s, %s, %s, %s, %s)"
         values = (artist, song, album, url, played_at)
 
         try:
