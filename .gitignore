@@ -7,6 +7,6 @@ darkzone
 deepspaceone
 dronezone
 missioncontrol
-
-
+htmlcov
+.coverage
 

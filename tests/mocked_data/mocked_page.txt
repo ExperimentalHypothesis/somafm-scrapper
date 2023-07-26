@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- 
+
+	Do not edit this by hand, use the config files. 
+
+	PS- SomaFM Loves You!
+
+-->
+<!-- dronezone -->
+
+
+
+
+
+
+
+
+
+<!-- end config -->
+
+
+
+<!-- OG -->
+<meta property="og:url" content="https://SomaFM.com/dronezone/" />
+<meta property="og:title" content="Drone Zone from SomaFM" />
+<meta property="og:description" content="Served best chilled, safe with most medications. Atmospheric textures with minimal beats." />
+<meta property="og:image" content="https://somafm.com/img3/dronezone-400.png" />
+
+
+
+
+<head>
+<title>
+SomaFM: Drone Zone Song History (Recently Played Tracks)
+</title>
+<!-- begin top-player-ajax.html -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta HTTP-EQUIV="Expires" CONTENT="Thu, 01 Dec 1999 16:00:00 GMT">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<link rel="stylesheet" type="text/css" media="screen" href="/soma10.css" />
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script src="/js/jquery-3.4.0.min.js"></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type="text/javascript" src="/js/soma.js"></script>
+<script>
+var qs = '';
+</script>
+
+
+<noscript>
+<meta http-equiv="refresh" content="85" />
+</noscript>
+<script>jQuery.noConflict();</script>
+</head>
+<body>
+<div id="theContainer">
+<div id="head">
+<h1><a href="/">soma fm</a></h1>
+
+
+<!-- Navigation -->
+
+<div id="soma"><div>
+<a href="/listen/">listen</a> | 
+<a href="/news/">news</a> |
+<span class="hilite"><a href="/support/">support/donate</a></span> |
+<a href="/store" target="_store">store</a> |
+
+<a href="/playlist/">playlists</a>  |
+<a href="/mobile/">mobile</a>  |
+<a href="/podcasts/">podcasts</a>
+<!--
+<a href="/articles/">features</a> |
+-->
+<br />
+<a href="/mailinglist/">mailing list</a> |
+<a href="/chat/">guestbook</a> |
+<a href="/about/">about</a> | 
+<!--
+<strike>@twitter</strike> |
+<a href="https://twitter.com/somafm/" target="_blank"  >@twitter</a> |
+-->
+<a rel="me" href="https://sfba.social/@somafm" target="_blank">Mastodon</a>
+|
+<a href="https://instagram.com/somafm_official/" target="_blank"  >@instagram</a> |
+<a target="_blank" href="https://www.yelp.com/biz/hHdV3tl8IurzzM3XrJFMQw#hrid:C-TEI6N7oPOjCRQNIXKsWg">@yelp</a> | 
+<!--
+<a href="/linktous/">link to us</a>
+-->
+<a href="/contact/">contact</a>
+
+</div> 
+</div>
+
+
+</div>
+<div id="theBody">
+
+<link rel="stylesheet" type="text/css" media="screen" href="/chcommon/x15.css" />
+<!-- set style here for page we're on -->
+<style>
+<!-- /* Nav Highlight */ a#songhistory { 	
+	background: #484848;
+	}
+-->
+</style>
+
+<!-- channel page left hand nav -->
+<div id="lhn">
+<div id="channellogo">
+<img src="/img3/dronezone-400.png" height="200" width="200" alt="" align="left" />
+</div>
+<br clear="all"/>
+
+<ul>
+<li><a id="tunein" href="index.html">Tune In</a></li>
+<li><a id="aboutyourdj" href="aboutyourdj.html">About your DJ</a></li>
+<li><a id="songhistory" href="songhistory.html">Song History</a></li>
+<li><a id="artists" href="artists.html">Artists</a></li>
+<!--
+<li><a id="directstreamlinks" href="directstreamlinks.html">Direct Stream Links</a></li>
+-->
+<!--
+<li><a id="toptracks" href="toptracks.html">This Week's Top Tracks</a></li>
+<li><a id="suggest" href="suggest.html">Suggest a Track</a></li>
+-->
+</ul>
+
+
+</div>
+
+
+<!-- Content Starts -->
+<div id="midcontent">
+
+
+
+<div id="channelblock">
+<h1>
+Drone Zone
+</h1> 
+<h2>
+Recently Played Songs
+</h2>
+</div><!-- end channelblock -->
+
+<div id="schedule">
+<!-- Wednesday, 26-Jul-2023 11:48:00 PDT -->
+
+
+<!-- Start Common Schedule -->
+<!-- schedule-common content -->
+
+
+
+
+
+
+<!-- End Common Schedule -->
+
+
+
+</div>
+
+<p class="green">
+Links default to searching Amazon.com. SomaFM is an Amazon Affiliate and receives a commission on these purchases.
+When provided and available, we link independent artist sites.
+</p>
+
+
+
+<div id="playinc">
+<table width="100%" border="0">
+<tr>
+ <td width="15%" class="boldblue">Played At</td><td width="25%" class="boldblue">Artist</td><td width="25%" class="boldblue">Song</td><td width="30%" class="boldblue">Album</td><td width="5%" class="boldblue"></td></tr><tr><td colspan="5"><img src="/img3/red.gif" height="1" width="100%" alt="" /></td></tr>
+
+<!-- line 1 -->
+<tr><td>11:47:31&nbsp; (Now) </td>
+<td><a  target="_blank" href="https://www.kellydavid.com/" title="Go to Kelly David&#146;s site" >Kelly David</a></td><td>Meditation in Green</td><td><a target="_blank" href="https://ambientelectronic.bandcamp.com" title="More information for Meditation In Green" >Meditation In Green</a></td>
+<td></td>
+</tr>
+
+<!-- line 2 -->
+<tr><td>11:36:38</td>
+<td><a  target="_blank" href="https://exospheremusic.bandcamp.com" title="More info on Isostatic" >Isostatic</a></td><td>Hibernal</td><td><a target="_blank" href="https://exospheremusic.bandcamp.com" title="More information for Winter's Edge" >Winter's Edge</a></td>
+<td></td>
+</tr>
+
+<!-- line 3 -->
+<tr><td>11:27:55</td>
+<td><a  target="_blank" href="https://www.hypnos.com/aproduce/" title="More info on A Produce" >A Produce</a></td><td>The Big Sleep</td><td><a target="_blank" href="https://www.hypnos.com/aproduce/" title="More information for Smile On The Void" >Smile On The Void</a></td>
+<td></td>
+</tr>
+
+<!-- line 4 -->
+<tr><td>11:16:45</td>
+<td><a  target="_blank" href="https://altusmusic.bandcamp.com" title="More info on Loneward" >Loneward</a></td><td>Let Go</td><td><a target="_blank" href="https://altusmusic.bandcamp.com" title="More information for Pure" >Pure</a></td>
+<td></td>
+</tr>
+
+<!-- line 5 -->
+<tr><td>11:09:15</td>
+<td><a  target="_blank" href="https://robertrich.bandcamp.com" title="More info on Robert Rich" >Robert Rich</a></td><td>Meridian Respiration</td><td><a target="_blank" href="https://robertrich.bandcamp.com" title="More information for Tactile Ground" >Tactile Ground</a></td>
+<td></td>
+</tr>
+
+<!-- line 6 -->
+<tr><td>11:06:42</td>
+<td><a  target="_blank" href="https://www.wollo.com/home.htm" title="More info on Erik Wollo" >Erik Wollo</a></td><td>Silent Currents 1-3</td><td><a target="_blank" href="https://www.wollo.com/home.htm" title="More information for Silent Currents 1" >Silent Currents 1</a></td>
+<td></td>
+</tr>
+
+<!-- line 7 -->
+<tr><td>11:04:02</td>
+<td><a  target="_blank" href="https://www.geophonicrecords.com" title="More info on James Johnson [Aperus]" >James Johnson [Aperus]</a></td><td>Nostalgia And Memory</td><td><a target="_blank" href="https://www.geophonicrecords.com" title="More information for Ecotone" >Ecotone</a></td>
+<td></td>
+</tr>
+
+<!-- line 8 -->
+<tr><td>10:45:59</td>
+<td><a  target="_blank" href="https://ambientelectronic.bandcamp.com" title="More info on Howard Givens & Craig Padilla" >Howard Givens & Craig Padilla</a></td><td>Leaving Behind the Now</td><td><a target="_blank" href="https://ambientelectronic.bandcamp.com" title="More information for The Bodhi Mantra" >The Bodhi Mantra</a></td>
+<td></td>
+</tr>
+
+<!-- line 9 -->
+<tr><td>10:37:17</td>
+<td><a  target="_blank" href="https://www.luminasounds.com/" title="Go to Igneous Flame&#146;s site" >Igneous Flame</a></td><td>Fix Your Gaze</td><td><a target="_blank" href="https://igneousflame.bandcamp.com" title="More information for Indigo" >Indigo</a></td>
+<td></td>
+</tr>
+
+<!-- line 10 -->
+<tr><td>10:37:08</td>
+<td colspan="4"><span class="dim">Break / Station ID</span></td></tr>
+
+<!-- line 11 -->
+<tr><td>10:31:13</td>
+<td><a  target="_blank" href="https://neostramusic.bandcamp.com" title="More info on Neostra" >Neostra</a></td><td>Dreaming in Drift</td><td><a target="_blank" href="https://neostramusic.bandcamp.com" title="More information for Seven Colors" >Seven Colors</a></td>
+<td></td>
+</tr>
+
+<!-- line 12 -->
+<tr><td>10:13:11</td>
+<td><a  target="_blank" href="https://mutagenese.bandcamp.com" title="More info on Mutagenese" >Mutagenese</a></td><td>Timescape</td><td><a target="_blank" href="https://mutagenese.bandcamp.com" title="More information for Exploration spatiale" >Exploration spatiale</a></td>
+<td></td>
+</tr>
+
+<!-- line 13 -->
+<tr><td>10:09:09</td>
+<td><a  target="_blank" href="https://headzic.bandcamp.com" title="More info on Headzic" >Headzic</a></td><td>Future Ocean</td><td><a target="_blank" href="https://headzic.bandcamp.com" title="More information for Futures" >Futures</a></td>
+<td></td>
+</tr>
+
+<!-- line 14 -->
+<tr><td>09:59:22</td>
+<td><a  target="_blank" href="https://synkrotron.bandcamp.com" title="More info on synkrotron" >synkrotron</a></td><td>DRONE Part Five</td><td><a target="_blank" href="https://synkrotron.bandcamp.com" title="More information for DRONE" >DRONE</a></td>
+<td></td>
+</tr>
+
+<!-- line 15 -->
+<tr><td>09:56:50</td>
+<td><a  target="_blank" href="https://jakobthiesen.bandcamp.com" title="More info on Jakob Thiesen" >Jakob Thiesen</a></td><td>Hexagonalplate</td><td><a target="_blank" href="https://jakobthiesen.bandcamp.com" title="More information for simpleprisms" >simpleprisms</a></td>
+<td></td>
+</tr>
+
+<!-- line 16 -->
+<tr><td>09:51:54</td>
+<td><a  target="_blank" href="https://chriscoco.bandcamp.com" title="More info on Chris Coco" >Chris Coco</a></td><td>A Citizen Of Nowhere</td><td><a target="_blank" href="https://chriscoco.bandcamp.com" title="More information for Music As A Foreign Language" >Music As A Foreign Language</a></td>
+<td></td>
+</tr>
+
+<!-- line 17 -->
+<tr><td>09:44:57</td>
+<td><a  target="_blank" href="https://solyaris.altervista.org" title="Go to Solyaris&#146;s site" >Solyaris</a></td><td>Talking Stones Levitation Path</td><td><a target="_blank" href="/buy/multibuy.cgi?mode=amazon&amp;title=Talking%20Stones%20Levitation%20Path&amp;album=Ascension%20And%20Revelation&amp;artist=Solyaris" title="Search Amazon for Ascension And Revelation" >Ascension And Revelation</a></td>
+<td></td>
+</tr>
+
+<!-- line 18 -->
+<tr><td>09:41:54</td>
+<td><a  target="_blank" href="https://www.earthmantra.com" title="More info on Phillip Wilkerson" >Phillip Wilkerson</a></td><td>Infinite Possibility</td><td><a target="_blank" href="https://www.earthmantra.com" title="More information for Sun Tracer" >Sun Tracer</a></td>
+<td></td>
+</tr>
+
+<!-- line 19 -->
+<tr><td>09:38:20</td>
+<td><a  target="_blank" href="https://n5md.com/discography/196/Embrace" title="More info on Ex Confusion" >Ex Confusion</a></td><td>Speak Softly In My Dreams</td><td><a target="_blank" href="https://n5md.com/discography/196/Embrace" title="More information for Embrace" >Embrace</a></td>
+<td></td>
+</tr>
+
+<!-- line 20 -->
+<tr><td>09:31:48</td>
+<td><a  target="_blank" href="https://projektrecords.bandcamp.com" title="More info on Loren Nerell" >Loren Nerell</a></td><td>Tenganan Grove</td><td><a target="_blank" href="https://projektrecords.bandcamp.com" title="More information for The Venerable Dark Cloud" >The Venerable Dark Cloud</a></td>
+<td></td>
+</tr>
+<tr><td colspan="5"><img src="/img3/red.gif" height="1" width="100%" alt="" /></td></tr>
+</table>
+</div>
+
+
+
+
+<p>Unfortunately, Amazon does not carry all the music that we play on SomaFM so some searches may fail to match anything. You may want to try searching on <a href="https://bandcamp.com">Bandcamp</a>, <a href="https://discogs.com">Discogs</a>, or your favorite used CD store in these instances.
+</p>
+ 
+
+<!--
+<h2>
+<a href="playlistarchive.html">&lt;- Older Playlists</a>
+</h2>
+-->
+
+</div><!-- end midcontent -->
+
+<!-- start right side -->
+<div id="rhnews"  >
+
+<!-- Number of Slots: 4 -->
+
+
+
+	<!-- init -->
+	<script>document.cookie="dronezoneSidebarRotator=2;path=/";</script>
+	<!-- First Item -->
+	<!-- Slot 1 -->
+<div class="imagecentered">
+<h2><a href="https://store.somafm.com/products/drone-zone-12x12-canvas-print" text="Buy Drone Zone 16x16" Stretched Canvas Print" target="StoreWindow">Drone Zone 16x16" Stretched Canvas Print</a></h2>
+<span class="rhpics">
+<a href="https://store.somafm.com/products/drone-zone-12x12-canvas-print" text="Buy Drone Zone 16x16" Stretched Canvas Print" target="StoreWindow"><img src="/storecache/mockup-f458e05b_large.png" style="width:180px;margin-left:-6px"></a>
+</span></div>
+<p class="whitey">Hang some art featuring your favorite channel on your wall. Stretched canvas prints have a vivid, fade-resistant print that that stand out beautifully on any wall. Designed by Merin McDonell.  <a href="https://store.somafm.com/products/drone-zone-12x12-canvas-print" text="Buy Drone Zone 16x16" Stretched Canvas Print" target="StoreWindow">Get yours with a $89 (plus postage) donation.</a>
+
+
+
+
+
+
+
+<h1>This Week's Top Artists</h1>
+
+<ol>
+<li><a href="https://www.steveroach.com/">Steve Roach</a></li>
+<li><a href="https://somafm.com/buy?Innesti">Innesti</a></li>
+<li><a href="https://somafm.com/buy?Max Corbacho">Max Corbacho</a></li>
+<li><a href="https://somafm.com/buy?Robert Rich">Robert Rich</a></li>
+<li><a href="https://louigi.bandcamp.com/">Louigi Verona</a></li>
+<li><a href="https://somafm.com/buy?Isostatic">Isostatic</a></li>
+<li><a href="https://somafm.com/buy?ASC">ASC</a></li>
+<li><a href="https://somafm.com/buy?Steve Good">Steve Good</a></li>
+<li><a href="https://somafm.com/buy?Levete">Levete</a></li>
+<li><a href="https://somafm.com/buy?jarguna">jarguna</a></li>
+<li><a href="https://somafm.com/buy?Remote Vision">Remote Vision</a></li>
+<li><a href="https://www.luminasounds.com/">Igneous Flame</a></li>
+<li><a href="https://steve-brand.bandcamp.com">Steve Brand</a></li>
+<li><a href="https://somafm.com/buy?Erik Wollo">Erik Wollo</a></li>
+<li><a href="https://somafm.com/buy?AES DANA">AES DANA</a></li>
+<li><a href="https://somafm.com/buy?Lingua Lustra">Lingua Lustra</a></li>
+<li><a href="https://somafm.com/buy?Mount Shrine">Mount Shrine</a></li>
+<li><a href="https://somafm.com/buy?Loneward">Loneward</a></li>
+<li><a href="https://somafm.com/buy?Wings Of An Angel">Wings Of An Angel</a></li>
+<li><a href="https://somafm.com/buy?Rising Galaxy">Rising Galaxy</a></li>
+<li><a href="https://mtshrine.bandcamp.com">Mount Hibiki</a></li>
+<li><a href="https://somafm.com/buy?A Produce">A Produce</a></li>
+<li><a href="https://somafm.com/buy?Phillip Wilkerson">Phillip Wilkerson</a></li>
+<li><a href="https://somafm.com/buy?Transponder">Transponder</a></li>
+<li><a href="https://somafm.com/buy?Eguana">Eguana</a></li>
+<li><a href="https://somafm.com/buy?Ambiente Solstice">Ambiente Solstice</a></li>
+<li><a href="https://solyaris.altervista.org">Solyaris</a></li>
+<li><a href="https://resonantdrift.com/">Resonant Drift</a></li>
+<li><a href="https://spaceformusic.com/brannanlane/">Brannan Lane</a></li>
+<li><a href="https://somafm.com/buy?Rudy Adrian">Rudy Adrian</a></li>
+</ol>
+
+
+
+<h3><a href="/charts/dronezone" />Complete Charts</a></h3>
+
+</div><!-- end rhnews -->
+
+
+
+
+</div><!-- end theBody -->
+
+<script>
+var qs = 'dronezone';
+</script>
+<script type="text/javascript" src="/js/playingv2.js">
+</script>
+
+<!-- begin chcommon/foot-css.html -->
+<div id="foot">
+
+<p>Copyright &copy;2000-2023  SomaFM.com, LLC. All rights reserved.
+Groove Salad, Drone Zone, Cliqhop, Secret Agent, Space Station Soma, Digitalis, PopTron, Suburbs of Goa and Illinois Street Lounge are trademarks of SomaFM.com, LLC.
+<br /><a href="/contact/privacy.html">Privacy Policy</a> | <a href="/contact/tos.html">Terms of Service</a> |
+Lone DJ photo &copy;2000 <a href="https://www.merin.org/">Merin McDonell</a>.
+</p>
+</div><!-- end foot -->
+</div><!-- end theContainer -->
+
+<!--
+<script type="text/javascript" src="//monitor.somafm.com/mint/?js"></script>
+-->
+
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+function InitReload() {
+
+	new Ajax.PeriodicalUpdater('schedule', 'schedule.html', {
+	  method: 'get', frequency: 60, decay: 1});
+}
+
+</script>
