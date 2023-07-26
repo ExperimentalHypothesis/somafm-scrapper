@@ -1,9 +1,8 @@
 from collections import namedtuple
 from typing import List, Optional
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 
-
-import requests
+import requests, pytz
 from bs4 import BeautifulSoup
 
 
@@ -41,13 +40,17 @@ class PlaylistParser:
         locator = "td:nth-child(1)"
         played_at = [a.text for a in self.soup.select(locator)[1:] if a.text]
 
-        if last_idx := self.last_before_midnight(played_at) is None:
-            times = [self.convert_time(time) for time in played_at]
+        if last_idx := self.last_before_midnight(played_at):
+            times = []
+            for idx, time in enumerate(played_at):
+                if idx < last_idx:
+                    times.append(self.convert_str_to_datetime(time))
+                else:
+                    times.append(self.convert_str_to_datetime(time) - timedelta(days=1))
         else:
-            times = [self.convert_time(time) - timedelta(days=1) for time in played_at if i <= last_idx]
+            times = [self.convert_str_to_datetime(time) for time in played_at]
 
         return times
-
 
     @property
     def artists(self):
@@ -92,10 +95,9 @@ class PlaylistParser:
             del played_at[idx]
 
     @staticmethod
-    def convert_time(scrapped_time: str) -> datetime:
+    def convert_str_to_datetime(scrapped_time: str) -> datetime:
         scrapped_time = scrapped_time.replace("\xa0 (Now)", "").strip()
-        current_date = datetime.now().date()
-        current_datetime = f"{current_date} {scrapped_time}"
+        current_datetime = f"{datetime.now().date()} {scrapped_time}"
         return datetime.strptime(current_datetime, "%Y-%m-%d %H:%M:%S")
 
     @staticmethod
@@ -106,8 +108,17 @@ class PlaylistParser:
         return None
 
 
+    @staticmethod
+    def get_current_date_in_la_timezone():
+        utc_now = datetime.utcnow()
+        target_timezone = pytz.timezone("America/Los_Angeles")
+        target_time = utc_now.replace(tzinfo=pytz.utc).astimezone(target_timezone)
+        return target_time.date()
+
+
 if __name__ == "__main__":
-    p = PlaylistParser("https://somafm.com/dronezone/songhistory.html")
-    p.parse()
-    for i in p.parsed:
-        print(i)
+    PlaylistParser("https://somafm.com/dronezone/songhistory.html")
+#     # p = PlaylistParser("https://somafm.com/dronezone/songhistory.html")
+#     # p.parse()
+#     # for i in p.parsed:
+#     #     print(i)

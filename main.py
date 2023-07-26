@@ -1,13 +1,11 @@
-import time
-
 from src.db_writer import MySQL
 from src.playlist_parser import PlaylistParser
 
 URLS = [
     "https://somafm.com/dronezone/songhistory.html",
-    "https://somafm.com/darkzone/songhistory.html",
-    "https://somafm.com/deepspaceone/songhistory.html",
-    "https://somafm.com/missioncontrol/songhistory.html"
+    # "https://somafm.com/darkzone/songhistory.html",
+    # "https://somafm.com/deepspaceone/songhistory.html",
+    # "https://somafm.com/missioncontrol/songhistory.html"
 ]
 
 def get_parsed_rows(urls: list) -> list:
@@ -40,10 +38,8 @@ def main():
 
 
 if __name__ == "__main__":
-    while True:
-        mysql = MySQL()
-        try:
-            main()
-        finally:
-            mysql.close()
-        time.sleep(3600)
+    mysql = MySQL()
+    try:
+        main()
+    finally:
+        mysql.close()
