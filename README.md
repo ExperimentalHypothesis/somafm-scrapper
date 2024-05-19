@@ -28,4 +28,7 @@ It scrapes the name of author, song, album and url.
    ```sh
     crontab -e
     59 * * * * /path/to/your//venv/bin/python /path/to/your/project/main.py >> /path/to/your/project/logs.txt 2>&1
+
+## Prerequisites
+You need to have a running MySql DB instance and provide credentials in .env file to connect to it.  
  
