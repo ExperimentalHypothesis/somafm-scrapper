@@ -17,17 +17,14 @@ It scrapes the name of author, song, album and url.
 2. **Set up a virtual environment**:
    ```sh
     python -m venv venv
-    source venv/bin/activate
 3. **Install dependencies**:
    ```sh
     pip install -r requirements.txt
-4. **Usage**:
+4. **Run manually**:
    ```sh
-    pip install -r requirements.txt
-5. **Run manually**:
-   ```sh
+    source venv/bin/activate
     python main.py
-6. **Run with cronjob**:
+5. **Run with cronjob**:
    ```sh
     59 * * * * /path/to/your//venv/bin/python /path/to/your/project/main.py >> /path/to/your/project/logs.txt 2>&1
  
