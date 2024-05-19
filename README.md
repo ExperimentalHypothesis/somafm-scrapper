@@ -8,7 +8,7 @@ This project contains a script to scrape playlist from SomaFM and save it to MyS
 
 It scrapes the name of author, song, album and url. 
 
-## Installation
+## Usage
 
 1. **Clone the repository**:
    ```sh
@@ -26,5 +26,6 @@ It scrapes the name of author, song, album and url.
     python main.py
 5. **Run with cronjob**:
    ```sh
+    crontab -e
     59 * * * * /path/to/your//venv/bin/python /path/to/your/project/main.py >> /path/to/your/project/logs.txt 2>&1
  
