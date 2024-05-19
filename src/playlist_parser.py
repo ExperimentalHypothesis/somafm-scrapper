@@ -97,7 +97,9 @@ class PlaylistParser:
     @staticmethod
     def convert_str_to_datetime(scrapped_time: str) -> datetime:
         scrapped_time = scrapped_time.replace("\xa0 (Now)", "").strip()
-        current_datetime = f"{datetime.now().date()} {scrapped_time}"
+        utc_now = datetime.utcnow()
+        la_date = utc_now.replace(tzinfo=pytz.utc).astimezone(pytz.timezone("America/Los_Angeles")).date()
+        current_datetime = f"{la_date} {scrapped_time}"
         return datetime.strptime(current_datetime, "%Y-%m-%d %H:%M:%S")
 
     @staticmethod
@@ -111,7 +113,6 @@ class PlaylistParser:
     @staticmethod
     def get_current_date_in_la_timezone():
         utc_now = datetime.utcnow()
-        target_timezone = pytz.timezone("America/Los_Angeles")
         target_time = utc_now.replace(tzinfo=pytz.utc).astimezone(target_timezone)
         return target_time.date()
 

@@ -1,11 +1,16 @@
 from src.db_writer import MySQL
 from src.playlist_parser import PlaylistParser
+from datetime import datetime
+
+gl_run = 0
+
+CUR_DATETIME = datetime.now()
 
 URLS = [
     "https://somafm.com/dronezone/songhistory.html",
-    # "https://somafm.com/darkzone/songhistory.html",
-    # "https://somafm.com/deepspaceone/songhistory.html",
-    # "https://somafm.com/missioncontrol/songhistory.html"
+    "https://somafm.com/darkzone/songhistory.html",
+    "https://somafm.com/deepspaceone/songhistory.html",
+    "https://somafm.com/missioncontrol/songhistory.html"
 ]
 
 def get_parsed_rows(urls: list) -> list:
@@ -20,6 +25,9 @@ def get_parsed_rows(urls: list) -> list:
 
 
 def main():
+    global gl_run
+    print(gl_run)
+    gl_run +=1
     rows = get_parsed_rows(urls=URLS)
     channels = {row[0]: None for row in rows}
     for channel, last_played_at in channels.items():
@@ -32,7 +40,7 @@ def main():
         song = row[2]
         album = row[3]
         if played_at <= channels[channel]:
-            print(f"kanal: {channel}, last DT: {channels[channel]} | {played_at}, {artist}, {song}, {album}")
+            print(f"{CUR_DATETIME} {channel}, last dt={channels[channel]} actual dt={played_at}, song={song}")
             continue
         mysql.insert_row(*row)
 

@@ -5,13 +5,14 @@ from mysql.connector import Error
 
 from src.config import DB_NAME, DB_HOST, DB_USER, DB_PASSWORD
 
+CUR_DATETIME = datetime.now()
 
 class MySQL:
     def __init__(self):
         self.connection = None
         self.cursor = None
 
-        print(f"connecting to db")
+        print(f"{CUR_DATETIME} connecting to db")
         try:
             self.connection = mysql.connector.connect(
                 host=DB_HOST,
@@ -21,11 +22,11 @@ class MySQL:
             )
             self.cursor = self.connection.cursor()
         except Error as er:
-            print(f"Error {er} while connecting")
+            print(f"{CUR_DATETIME} Error {er} while connecting")
 
 
     def insert_row(self, table_name, artist, song, album, url, played_at):
-        print(f"inserting {artist}, {song}, {album} to table {table_name}")
+        print(f"{CUR_DATETIME} inserting {artist}, {song}, {album} to table {table_name}")
 
         qry = f"INSERT INTO {table_name} (artist, song, album, url, played_at) VALUES (%s, %s, %s, %s, %s)"
         values = (artist, song, album, url, played_at)
@@ -34,10 +35,10 @@ class MySQL:
             self.cursor.execute(qry, values)
             self.connection.commit()
         except Error as er:
-            print(f"Error {er} while inserting {values}")
+            print(f"{CUR_DATETIME} Error {er} while inserting {values}")
 
     def fetch_last_played_at(self, table_name):
-        print(f"fetching last played from {table_name}")
+        print(f"{CUR_DATETIME} fetching last played from {table_name}")
         try:
             query = f"SELECT played_at FROM {table_name} ORDER BY played_at DESC LIMIT 1"
             self.cursor.execute(query)
@@ -45,10 +46,10 @@ class MySQL:
             return result[0] if result else datetime(2000, 1, 1, 0, 00, 0)
             # return result[0] or datetime(2000, 1, 1, 0, 00, 0)
         except Error as er:
-            print(f"Error {er} while executing query: {query}")
+            print(f"{CUR_DATETIME} Error {er} while executing query: {query}")
 
     def close(self):
-        print(f"disconnecting from db")
+        print(f"{CUR_DATETIME} disconnecting from db")
         if self.connection.is_connected():
             self.cursor.close()
             self.connection.close()

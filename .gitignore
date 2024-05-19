@@ -9,4 +9,5 @@ dronezone
 missioncontrol
 htmlcov
 .coverage
-
+venv
+logs.txt
